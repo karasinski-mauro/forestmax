@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_46f6910723e1fe926d0ed604c38e0d8f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_46f6910723e1fe926d0ed604c38e0d8f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_46f6910723e1fe926d0ed604c38e0d8f = L.map(
+                "map_46f6910723e1fe926d0ed604c38e0d8f",
+                {
+                    center: [-15.793889, -47.882778],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e3d39bc623e9ace604e28437f5981553 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var circle_3aa037fe52f9cca9787d5e8d583ce54e = L.circle(
+                [-15.793889, -47.882778],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000000, "stroke": true, "weight": 3}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            circle_3aa037fe52f9cca9787d5e8d583ce54e.bindTooltip(
+                `<div>
+                     Raio de 1000 km
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fc41182e2517f1501b7b4d61c8248b1a = L.marker(
+                [-15.793889, -47.882778],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_b86db8fc65c355c4bc135465fd7c7815 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fc41182e2517f1501b7b4d61c8248b1a.setIcon(icon_b86db8fc65c355c4bc135465fd7c7815);
+        
+    
+            marker_fc41182e2517f1501b7b4d61c8248b1a.bindTooltip(
+                `<div>
+                     Brasília (BSB)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1b63fad6ff10811eb7c56d76fafb0045 = L.marker(
+                [-16.686882, -49.264788],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_a27f7a1228d1d68b51d227c414661a9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1b63fad6ff10811eb7c56d76fafb0045.setIcon(icon_a27f7a1228d1d68b51d227c414661a9f);
+        
+    
+        var popup_474cdee3f9d6c4709448114f77b60bd8 = L.popup({"maxWidth": 300});
+
+        
+            var html_522a5468756b2e458c2d0cc6acb60134 = $(`<div id="html_522a5468756b2e458c2d0cc6acb60134" style="width: 100.0%; height: 100.0%;"><b>Goiânia</b><br>Distância: 178 km<br><a href="https://www.google.com/maps/dir/-16.686882,-49.264788/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_474cdee3f9d6c4709448114f77b60bd8.setContent(html_522a5468756b2e458c2d0cc6acb60134);
+        
+
+        marker_1b63fad6ff10811eb7c56d76fafb0045.bindPopup(popup_474cdee3f9d6c4709448114f77b60bd8)
+        ;
+
+        
+    
+    
+            marker_1b63fad6ff10811eb7c56d76fafb0045.bindTooltip(
+                `<div>
+                     Goiânia (178 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c1365012e7c0e777bd1f5ddb9457a2d = L.marker(
+                [-18.9146, -48.2754],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_a1306222678b69c4f79ffafcb56169ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4c1365012e7c0e777bd1f5ddb9457a2d.setIcon(icon_a1306222678b69c4f79ffafcb56169ed);
+        
+    
+        var popup_05177eb356df772869290712bb698b19 = L.popup({"maxWidth": 300});
+
+        
+            var html_0895531c5bf82adce14d73f0ac4295ed = $(`<div id="html_0895531c5bf82adce14d73f0ac4295ed" style="width: 100.0%; height: 100.0%;"><b>Uberlândia</b><br>Distância: 348 km<br><a href="https://www.google.com/maps/dir/-18.9146,-48.2754/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_05177eb356df772869290712bb698b19.setContent(html_0895531c5bf82adce14d73f0ac4295ed);
+        
+
+        marker_4c1365012e7c0e777bd1f5ddb9457a2d.bindPopup(popup_05177eb356df772869290712bb698b19)
+        ;
+
+        
+    
+    
+            marker_4c1365012e7c0e777bd1f5ddb9457a2d.bindTooltip(
+                `<div>
+                     Uberlândia (348 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9c7ffde982b8d7d4b3da2cf9e507d92 = L.marker(
+                [-19.9167, -43.9345],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_802605df3d816c865815dcc75f4dba8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b9c7ffde982b8d7d4b3da2cf9e507d92.setIcon(icon_802605df3d816c865815dcc75f4dba8d);
+        
+    
+        var popup_6c9ca8db70133911a2ebc800b6c3f297 = L.popup({"maxWidth": 300});
+
+        
+            var html_101f6a19a3ccad4791c160bc097c3c77 = $(`<div id="html_101f6a19a3ccad4791c160bc097c3c77" style="width: 100.0%; height: 100.0%;"><b>Belo Horizonte</b><br>Distância: 619 km<br><a href="https://www.google.com/maps/dir/-19.9167,-43.9345/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_6c9ca8db70133911a2ebc800b6c3f297.setContent(html_101f6a19a3ccad4791c160bc097c3c77);
+        
+
+        marker_b9c7ffde982b8d7d4b3da2cf9e507d92.bindPopup(popup_6c9ca8db70133911a2ebc800b6c3f297)
+        ;
+
+        
+    
+    
+            marker_b9c7ffde982b8d7d4b3da2cf9e507d92.bindTooltip(
+                `<div>
+                     Belo Horizonte (619 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fadcac39f3180e318192239751ec03d0 = L.marker(
+                [-15.6014, -56.0979],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_f9fdd2e5fd7b7a98e7cca1d282712ad0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fadcac39f3180e318192239751ec03d0.setIcon(icon_f9fdd2e5fd7b7a98e7cca1d282712ad0);
+        
+    
+        var popup_9cb6389c75bc8e750be5a1213361edc5 = L.popup({"maxWidth": 300});
+
+        
+            var html_36fe97e06aad1ea8b4103a3a81fcbaae = $(`<div id="html_36fe97e06aad1ea8b4103a3a81fcbaae" style="width: 100.0%; height: 100.0%;"><b>Cuiabá</b><br>Distância: 881 km<br><a href="https://www.google.com/maps/dir/-15.6014,-56.0979/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_9cb6389c75bc8e750be5a1213361edc5.setContent(html_36fe97e06aad1ea8b4103a3a81fcbaae);
+        
+
+        marker_fadcac39f3180e318192239751ec03d0.bindPopup(popup_9cb6389c75bc8e750be5a1213361edc5)
+        ;
+
+        
+    
+    
+            marker_fadcac39f3180e318192239751ec03d0.bindTooltip(
+                `<div>
+                     Cuiabá (881 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd5bb8930c5cc74ee7465d8425cb9ff7 = L.marker(
+                [-20.4697, -54.6201],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_982c106268ff12a615a17d8a742b9b48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fd5bb8930c5cc74ee7465d8425cb9ff7.setIcon(icon_982c106268ff12a615a17d8a742b9b48);
+        
+    
+        var popup_28d879d7b30cc7d40718e23081fd80b9 = L.popup({"maxWidth": 300});
+
+        
+            var html_19a9fb3b80afab7bc7a3322baa154efc = $(`<div id="html_19a9fb3b80afab7bc7a3322baa154efc" style="width: 100.0%; height: 100.0%;"><b>Campo Grande</b><br>Distância: 881 km<br><a href="https://www.google.com/maps/dir/-20.4697,-54.6201/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_28d879d7b30cc7d40718e23081fd80b9.setContent(html_19a9fb3b80afab7bc7a3322baa154efc);
+        
+
+        marker_fd5bb8930c5cc74ee7465d8425cb9ff7.bindPopup(popup_28d879d7b30cc7d40718e23081fd80b9)
+        ;
+
+        
+    
+    
+            marker_fd5bb8930c5cc74ee7465d8425cb9ff7.bindTooltip(
+                `<div>
+                     Campo Grande (881 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f14019d7675e1f57d127488fb415542 = L.marker(
+                [-21.1783, -47.8064],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_2bcda90454a932242607a4ac078f32fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1f14019d7675e1f57d127488fb415542.setIcon(icon_2bcda90454a932242607a4ac078f32fb);
+        
+    
+        var popup_1032cdbbe451caef0f64675349059c28 = L.popup({"maxWidth": 300});
+
+        
+            var html_26f9aaeef6ce176a29c3de0eae664f24 = $(`<div id="html_26f9aaeef6ce176a29c3de0eae664f24" style="width: 100.0%; height: 100.0%;"><b>Ribeirão Preto</b><br>Distância: 596 km<br><a href="https://www.google.com/maps/dir/-21.1783,-47.8064/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_1032cdbbe451caef0f64675349059c28.setContent(html_26f9aaeef6ce176a29c3de0eae664f24);
+        
+
+        marker_1f14019d7675e1f57d127488fb415542.bindPopup(popup_1032cdbbe451caef0f64675349059c28)
+        ;
+
+        
+    
+    
+            marker_1f14019d7675e1f57d127488fb415542.bindTooltip(
+                `<div>
+                     Ribeirão Preto (596 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35c31ee6699a821793c318188be95fd7 = L.marker(
+                [-10.2128, -48.3603],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_0d4a33da5e280e31870784509f2f64ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_35c31ee6699a821793c318188be95fd7.setIcon(icon_0d4a33da5e280e31870784509f2f64ca);
+        
+    
+        var popup_37f79d574eb3d5f6ad2b258cc08bf6e0 = L.popup({"maxWidth": 300});
+
+        
+            var html_4eb4a569e9e2206aad3389e7898597ca = $(`<div id="html_4eb4a569e9e2206aad3389e7898597ca" style="width: 100.0%; height: 100.0%;"><b>Palmas</b><br>Distância: 620 km<br><a href="https://www.google.com/maps/dir/-10.2128,-48.3603/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_37f79d574eb3d5f6ad2b258cc08bf6e0.setContent(html_4eb4a569e9e2206aad3389e7898597ca);
+        
+
+        marker_35c31ee6699a821793c318188be95fd7.bindPopup(popup_37f79d574eb3d5f6ad2b258cc08bf6e0)
+        ;
+
+        
+    
+    
+            marker_35c31ee6699a821793c318188be95fd7.bindTooltip(
+                `<div>
+                     Palmas (620 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_472019c904f4fd1c1e548fcc322a00e7 = L.marker(
+                [-16.3285, -48.953],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_8cb7b30b7076b837d1104fd670b9a9d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_472019c904f4fd1c1e548fcc322a00e7.setIcon(icon_8cb7b30b7076b837d1104fd670b9a9d6);
+        
+    
+        var popup_984fc36004fc2787b4e2f6f152d4de80 = L.popup({"maxWidth": 300});
+
+        
+            var html_a4847ec4a22d5d5e2f55cb060abd03b7 = $(`<div id="html_a4847ec4a22d5d5e2f55cb060abd03b7" style="width: 100.0%; height: 100.0%;"><b>Anápolis</b><br>Distância: 129 km<br><a href="https://www.google.com/maps/dir/-16.3285,-48.953/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_984fc36004fc2787b4e2f6f152d4de80.setContent(html_a4847ec4a22d5d5e2f55cb060abd03b7);
+        
+
+        marker_472019c904f4fd1c1e548fcc322a00e7.bindPopup(popup_984fc36004fc2787b4e2f6f152d4de80)
+        ;
+
+        
+    
+    
+            marker_472019c904f4fd1c1e548fcc322a00e7.bindTooltip(
+                `<div>
+                     Anápolis (129 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec24a193bf2aae61e252691570bcd04b = L.marker(
+                [-11.7284, -49.0683],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_6144ed750cd5f021c62141acda258b2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ec24a193bf2aae61e252691570bcd04b.setIcon(icon_6144ed750cd5f021c62141acda258b2b);
+        
+    
+        var popup_f6e4ee763dd2623571bc6c0dcc7573f6 = L.popup({"maxWidth": 300});
+
+        
+            var html_4ff2574779c093ce2ad0d8aafd1a6a65 = $(`<div id="html_4ff2574779c093ce2ad0d8aafd1a6a65" style="width: 100.0%; height: 100.0%;"><b>Gurupi</b><br>Distância: 468 km<br><a href="https://www.google.com/maps/dir/-11.7284,-49.0683/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_f6e4ee763dd2623571bc6c0dcc7573f6.setContent(html_4ff2574779c093ce2ad0d8aafd1a6a65);
+        
+
+        marker_ec24a193bf2aae61e252691570bcd04b.bindPopup(popup_f6e4ee763dd2623571bc6c0dcc7573f6)
+        ;
+
+        
+    
+    
+            marker_ec24a193bf2aae61e252691570bcd04b.bindTooltip(
+                `<div>
+                     Gurupi (468 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b14789527d7155fa91dcc89877a16a3f = L.marker(
+                [-18.4194, -49.2158],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_97e1cac2254fba185787c3646f376680 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b14789527d7155fa91dcc89877a16a3f.setIcon(icon_97e1cac2254fba185787c3646f376680);
+        
+    
+        var popup_0fa384fab892adcfe2a428ad0e48c874 = L.popup({"maxWidth": 300});
+
+        
+            var html_863e60fe06a4286e873bb3ef496c2291 = $(`<div id="html_863e60fe06a4286e873bb3ef496c2291" style="width: 100.0%; height: 100.0%;"><b>Itumbiara</b><br>Distância: 323 km<br><a href="https://www.google.com/maps/dir/-18.4194,-49.2158/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_0fa384fab892adcfe2a428ad0e48c874.setContent(html_863e60fe06a4286e873bb3ef496c2291);
+        
+
+        marker_b14789527d7155fa91dcc89877a16a3f.bindPopup(popup_0fa384fab892adcfe2a428ad0e48c874)
+        ;
+
+        
+    
+    
+            marker_b14789527d7155fa91dcc89877a16a3f.bindTooltip(
+                `<div>
+                     Itumbiara (323 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_423d086ddcd1a1c8580b97b8ff091c90 = L.marker(
+                [-18.1651, -47.944],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_a994116bc371d0c63479ea3ce8e124ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_423d086ddcd1a1c8580b97b8ff091c90.setIcon(icon_a994116bc371d0c63479ea3ce8e124ea);
+        
+    
+        var popup_4bdebb4f8752c902941098f09c0a70c6 = L.popup({"maxWidth": 300});
+
+        
+            var html_09abdc509715304c3259a13475d008e8 = $(`<div id="html_09abdc509715304c3259a13475d008e8" style="width: 100.0%; height: 100.0%;"><b>Catalão</b><br>Distância: 263 km<br><a href="https://www.google.com/maps/dir/-18.1651,-47.944/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_4bdebb4f8752c902941098f09c0a70c6.setContent(html_09abdc509715304c3259a13475d008e8);
+        
+
+        marker_423d086ddcd1a1c8580b97b8ff091c90.bindPopup(popup_4bdebb4f8752c902941098f09c0a70c6)
+        ;
+
+        
+    
+    
+            marker_423d086ddcd1a1c8580b97b8ff091c90.bindTooltip(
+                `<div>
+                     Catalão (263 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0835ac61336b9b67265ee1763bccc075 = L.marker(
+                [-23.5505, -46.6333],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_1fd442fbf5ed083aade4be9b6c7818c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0835ac61336b9b67265ee1763bccc075.setIcon(icon_1fd442fbf5ed083aade4be9b6c7818c2);
+        
+    
+        var popup_15568a616366a1b3c70d3773b918db77 = L.popup({"maxWidth": 300});
+
+        
+            var html_3c5bf017034f78241da774f7740a5a14 = $(`<div id="html_3c5bf017034f78241da774f7740a5a14" style="width: 100.0%; height: 100.0%;"><b>São Paulo</b><br>Distância: 869 km<br><a href="https://www.google.com/maps/dir/-23.5505,-46.6333/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_15568a616366a1b3c70d3773b918db77.setContent(html_3c5bf017034f78241da774f7740a5a14);
+        
+
+        marker_0835ac61336b9b67265ee1763bccc075.bindPopup(popup_15568a616366a1b3c70d3773b918db77)
+        ;
+
+        
+    
+    
+            marker_0835ac61336b9b67265ee1763bccc075.bindTooltip(
+                `<div>
+                     São Paulo (869 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dafc90d93a053db2f96c310ffe75efea = L.marker(
+                [-22.9068, -43.1729],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_985546b17bb165ae5fc7bbc40407c682 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dafc90d93a053db2f96c310ffe75efea.setIcon(icon_985546b17bb165ae5fc7bbc40407c682);
+        
+    
+        var popup_dee08eca781f04173c309fbb47e06077 = L.popup({"maxWidth": 300});
+
+        
+            var html_5253ca39d0a4d83c2f92b1494d78a013 = $(`<div id="html_5253ca39d0a4d83c2f92b1494d78a013" style="width: 100.0%; height: 100.0%;"><b>Rio de Janeiro</b><br>Distância: 930 km<br><a href="https://www.google.com/maps/dir/-22.9068,-43.1729/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_dee08eca781f04173c309fbb47e06077.setContent(html_5253ca39d0a4d83c2f92b1494d78a013);
+        
+
+        marker_dafc90d93a053db2f96c310ffe75efea.bindPopup(popup_dee08eca781f04173c309fbb47e06077)
+        ;
+
+        
+    
+    
+            marker_dafc90d93a053db2f96c310ffe75efea.bindTooltip(
+                `<div>
+                     Rio de Janeiro (930 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a6f41fcb1e8bf40062517081b277ae7 = L.marker(
+                [-12.9714, -38.5014],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_bb9f01ed621c11b75866cc9ab6d53727 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1a6f41fcb1e8bf40062517081b277ae7.setIcon(icon_bb9f01ed621c11b75866cc9ab6d53727);
+        
+    
+        var popup_9a6ac98c752fb1d6b509110851674f42 = L.popup({"maxWidth": 300});
+
+        
+            var html_d2bec426feeda18985aa593795853ed1 = $(`<div id="html_d2bec426feeda18985aa593795853ed1" style="width: 100.0%; height: 100.0%;"><b>Salvador</b><br>Distância: 1059 km<br><a href="https://www.google.com/maps/dir/-12.9714,-38.5014/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_9a6ac98c752fb1d6b509110851674f42.setContent(html_d2bec426feeda18985aa593795853ed1);
+        
+
+        marker_1a6f41fcb1e8bf40062517081b277ae7.bindPopup(popup_9a6ac98c752fb1d6b509110851674f42)
+        ;
+
+        
+    
+    
+            marker_1a6f41fcb1e8bf40062517081b277ae7.bindTooltip(
+                `<div>
+                     Salvador (1059 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79257b5a5a3152329753b56edc10054e = L.marker(
+                [-20.3155, -40.3128],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_84611e7d5d5fe0d4d1eab309f40e1507 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_79257b5a5a3152329753b56edc10054e.setIcon(icon_84611e7d5d5fe0d4d1eab309f40e1507);
+        
+    
+        var popup_3b1f8a40c2d362e8ae1ed79a6f0b090e = L.popup({"maxWidth": 300});
+
+        
+            var html_14d9cc2329b33098378f11bc06669abc = $(`<div id="html_14d9cc2329b33098378f11bc06669abc" style="width: 100.0%; height: 100.0%;"><b>Vitória</b><br>Distância: 945 km<br><a href="https://www.google.com/maps/dir/-20.3155,-40.3128/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_3b1f8a40c2d362e8ae1ed79a6f0b090e.setContent(html_14d9cc2329b33098378f11bc06669abc);
+        
+
+        marker_79257b5a5a3152329753b56edc10054e.bindPopup(popup_3b1f8a40c2d362e8ae1ed79a6f0b090e)
+        ;
+
+        
+    
+    
+            marker_79257b5a5a3152329753b56edc10054e.bindTooltip(
+                `<div>
+                     Vitória (945 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ddbe6d3ce93708a39bc6335042be8eb = L.marker(
+                [-16.4444, -39.0646],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_06e08715dc0b803c73e074cea9a5caa5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6ddbe6d3ce93708a39bc6335042be8eb.setIcon(icon_06e08715dc0b803c73e074cea9a5caa5);
+        
+    
+        var popup_e589f41d12e2fac4733c5e84b27f2227 = L.popup({"maxWidth": 300});
+
+        
+            var html_7c280a3b3596737650abe44a6de0d22b = $(`<div id="html_7c280a3b3596737650abe44a6de0d22b" style="width: 100.0%; height: 100.0%;"><b>Porto Seguro</b><br>Distância: 946 km<br><a href="https://www.google.com/maps/dir/-16.4444,-39.0646/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_e589f41d12e2fac4733c5e84b27f2227.setContent(html_7c280a3b3596737650abe44a6de0d22b);
+        
+
+        marker_6ddbe6d3ce93708a39bc6335042be8eb.bindPopup(popup_e589f41d12e2fac4733c5e84b27f2227)
+        ;
+
+        
+    
+    
+            marker_6ddbe6d3ce93708a39bc6335042be8eb.bindTooltip(
+                `<div>
+                     Porto Seguro (946 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b362be8b38f08cc077e88557910b814 = L.marker(
+                [-10.9472, -37.0731],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_d17ec27bf6fff156ed9697e22b47de7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8b362be8b38f08cc077e88557910b814.setIcon(icon_d17ec27bf6fff156ed9697e22b47de7a);
+        
+    
+        var popup_0a0ad6261bde670b8935b3681deb2f81 = L.popup({"maxWidth": 300});
+
+        
+            var html_7a5e67735054935003bd7a757f1fa85c = $(`<div id="html_7a5e67735054935003bd7a757f1fa85c" style="width: 100.0%; height: 100.0%;"><b>Aracaju</b><br>Distância: 1287 km<br><a href="https://www.google.com/maps/dir/-10.9472,-37.0731/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_0a0ad6261bde670b8935b3681deb2f81.setContent(html_7a5e67735054935003bd7a757f1fa85c);
+        
+
+        marker_8b362be8b38f08cc077e88557910b814.bindPopup(popup_0a0ad6261bde670b8935b3681deb2f81)
+        ;
+
+        
+    
+    
+            marker_8b362be8b38f08cc077e88557910b814.bindTooltip(
+                `<div>
+                     Aracaju (1287 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_247495465fe87fc0e215b8eb7bab9ca1 = L.marker(
+                [-20.7849, -51.7004],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_3931acc842148d33d700db8aab22ad0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_247495465fe87fc0e215b8eb7bab9ca1.setIcon(icon_3931acc842148d33d700db8aab22ad0c);
+        
+    
+        var popup_c75d37c01a2db87c350cca7aea34f516 = L.popup({"maxWidth": 300});
+
+        
+            var html_4d2b318b51e4351b4f03cdc14d78eb41 = $(`<div id="html_4d2b318b51e4351b4f03cdc14d78eb41" style="width: 100.0%; height: 100.0%;"><b>Três Lagoas</b><br>Distância: 684 km<br><a href="https://www.google.com/maps/dir/-20.7849,-51.7004/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_c75d37c01a2db87c350cca7aea34f516.setContent(html_4d2b318b51e4351b4f03cdc14d78eb41);
+        
+
+        marker_247495465fe87fc0e215b8eb7bab9ca1.bindPopup(popup_c75d37c01a2db87c350cca7aea34f516)
+        ;
+
+        
+    
+    
+            marker_247495465fe87fc0e215b8eb7bab9ca1.bindTooltip(
+                `<div>
+                     Três Lagoas (684 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e14c81808f8e7a6d387e198f27933475 = L.marker(
+                [-12.088, -45.7866],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_f9707924787a9b0fbeb11f5dda8ec00d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e14c81808f8e7a6d387e198f27933475.setIcon(icon_f9707924787a9b0fbeb11f5dda8ec00d);
+        
+    
+        var popup_72841e5e5f0e97f7a92a9efa1958e94b = L.popup({"maxWidth": 300});
+
+        
+            var html_003813b8d2d201fc2fa7db7e8cdea448 = $(`<div id="html_003813b8d2d201fc2fa7db7e8cdea448" style="width: 100.0%; height: 100.0%;"><b>Luiz Eduardo Magalhães</b><br>Distância: 468 km<br><a href="https://www.google.com/maps/dir/-12.088,-45.7866/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_72841e5e5f0e97f7a92a9efa1958e94b.setContent(html_003813b8d2d201fc2fa7db7e8cdea448);
+        
+
+        marker_e14c81808f8e7a6d387e198f27933475.bindPopup(popup_72841e5e5f0e97f7a92a9efa1958e94b)
+        ;
+
+        
+    
+    
+            marker_e14c81808f8e7a6d387e198f27933475.bindTooltip(
+                `<div>
+                     Luiz Eduardo Magalhães (468 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e2bf74aaec32cf28396883464c325de = L.marker(
+                [-16.7282, -43.8578],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_e054c8ba532ad7b3abad5ffee2a35f35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0e2bf74aaec32cf28396883464c325de.setIcon(icon_e054c8ba532ad7b3abad5ffee2a35f35);
+        
+    
+        var popup_09abaa69ee2eeac722f9abefdba4fac3 = L.popup({"maxWidth": 300});
+
+        
+            var html_2ba6459a9f965fadb5c5ad844a8add55 = $(`<div id="html_2ba6459a9f965fadb5c5ad844a8add55" style="width: 100.0%; height: 100.0%;"><b>Montes Claros</b><br>Distância: 442 km<br><a href="https://www.google.com/maps/dir/-16.7282,-43.8578/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_09abaa69ee2eeac722f9abefdba4fac3.setContent(html_2ba6459a9f965fadb5c5ad844a8add55);
+        
+
+        marker_0e2bf74aaec32cf28396883464c325de.bindPopup(popup_09abaa69ee2eeac722f9abefdba4fac3)
+        ;
+
+        
+    
+    
+            marker_0e2bf74aaec32cf28396883464c325de.bindTooltip(
+                `<div>
+                     Montes Claros (442 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8139c5c0ddcda0282af56b16f95a250 = L.marker(
+                [-18.8545, -41.9555],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_239f8954b130a81431092092fc5fd10e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a8139c5c0ddcda0282af56b16f95a250.setIcon(icon_239f8954b130a81431092092fc5fd10e);
+        
+    
+        var popup_d055c1a5a3d179ec71ea0be773ee913a = L.popup({"maxWidth": 300});
+
+        
+            var html_87d475e283ef5ddbc6f9244a7889ad87 = $(`<div id="html_87d475e283ef5ddbc6f9244a7889ad87" style="width: 100.0%; height: 100.0%;"><b>Governador Valadares</b><br>Distância: 715 km<br><a href="https://www.google.com/maps/dir/-18.8545,-41.9555/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_d055c1a5a3d179ec71ea0be773ee913a.setContent(html_87d475e283ef5ddbc6f9244a7889ad87);
+        
+
+        marker_a8139c5c0ddcda0282af56b16f95a250.bindPopup(popup_d055c1a5a3d179ec71ea0be773ee913a)
+        ;
+
+        
+    
+    
+            marker_a8139c5c0ddcda0282af56b16f95a250.bindTooltip(
+                `<div>
+                     Governador Valadares (715 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3797a617563f308a43de8efa311dd6c7 = L.marker(
+                [-20.4435, -53.7581],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_b9c3d38511d39b12095e5add9f8a5ab1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3797a617563f308a43de8efa311dd6c7.setIcon(icon_b9c3d38511d39b12095e5add9f8a5ab1);
+        
+    
+        var popup_e4da79de79915f66a1688e4efe17cce3 = L.popup({"maxWidth": 300});
+
+        
+            var html_8116449c4bb069c6abc6d8939fdac61b = $(`<div id="html_8116449c4bb069c6abc6d8939fdac61b" style="width: 100.0%; height: 100.0%;"><b>Ribas do Rio Pardo</b><br>Distância: 807 km<br><a href="https://www.google.com/maps/dir/-20.4435,-53.7581/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a></div>`)[0];
+            popup_e4da79de79915f66a1688e4efe17cce3.setContent(html_8116449c4bb069c6abc6d8939fdac61b);
+        
+
+        marker_3797a617563f308a43de8efa311dd6c7.bindPopup(popup_e4da79de79915f66a1688e4efe17cce3)
+        ;
+
+        
+    
+    
+            marker_3797a617563f308a43de8efa311dd6c7.bindTooltip(
+                `<div>
+                     Ribas do Rio Pardo (807 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f835b5d7872c1fb15b20d0fa7e32944d = L.marker(
+                [-23.4356, -46.4731],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_8ed59e2965b1a52eed2192ae9600eb6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f835b5d7872c1fb15b20d0fa7e32944d.setIcon(icon_8ed59e2965b1a52eed2192ae9600eb6a);
+        
+    
+        var popup_58e3fd2dd0e8318e717b42a460edfaae = L.popup({"maxWidth": 300});
+
+        
+            var html_4e4cbdd4b1ac90bcd584c65ae9859dba = $(`<div id="html_4e4cbdd4b1ac90bcd584c65ae9859dba" style="width: 100.0%; height: 100.0%;">     <b>São Paulo (GRU)</b><br>     Distância até Brasília: 859 km<br>     <a href="https://www.google.com/maps/dir/-23.4356,-46.4731/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=GRU.BSB.2025-09-09*BSB.GRU.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_58e3fd2dd0e8318e717b42a460edfaae.setContent(html_4e4cbdd4b1ac90bcd584c65ae9859dba);
+        
+
+        marker_f835b5d7872c1fb15b20d0fa7e32944d.bindPopup(popup_58e3fd2dd0e8318e717b42a460edfaae)
+        ;
+
+        
+    
+    
+            marker_f835b5d7872c1fb15b20d0fa7e32944d.bindTooltip(
+                `<div>
+                     São Paulo (GRU) (859 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6020c722e408aee28418e4a7d4382ae2 = L.marker(
+                [-23.6261, -46.6566],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_97d4687e11de7014615f32ef53f06c85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6020c722e408aee28418e4a7d4382ae2.setIcon(icon_97d4687e11de7014615f32ef53f06c85);
+        
+    
+        var popup_d55820ecea13b85989b04ab668e463e8 = L.popup({"maxWidth": 300});
+
+        
+            var html_a0e744435c0dd512961a0f2e16644218 = $(`<div id="html_a0e744435c0dd512961a0f2e16644218" style="width: 100.0%; height: 100.0%;">     <b>São Paulo (CGH)</b><br>     Distância até Brasília: 876 km<br>     <a href="https://www.google.com/maps/dir/-23.6261,-46.6566/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=CGH.BSB.2025-09-09*BSB.CGH.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_d55820ecea13b85989b04ab668e463e8.setContent(html_a0e744435c0dd512961a0f2e16644218);
+        
+
+        marker_6020c722e408aee28418e4a7d4382ae2.bindPopup(popup_d55820ecea13b85989b04ab668e463e8)
+        ;
+
+        
+    
+    
+            marker_6020c722e408aee28418e4a7d4382ae2.bindTooltip(
+                `<div>
+                     São Paulo (CGH) (876 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7fa0a96099c8fcefa25a47fbf4d0a79 = L.marker(
+                [-23.0074, -47.1345],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_c4bca3316568402b6954d026df06f030 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a7fa0a96099c8fcefa25a47fbf4d0a79.setIcon(icon_c4bca3316568402b6954d026df06f030);
+        
+    
+        var popup_3bfd12335ddbcb721bc2a4ff94b74774 = L.popup({"maxWidth": 300});
+
+        
+            var html_03d056f7febf033d4392aed6a143f75b = $(`<div id="html_03d056f7febf033d4392aed6a143f75b" style="width: 100.0%; height: 100.0%;">     <b>Campinas (VCP)</b><br>     Distância até Brasília: 802 km<br>     <a href="https://www.google.com/maps/dir/-23.0074,-47.1345/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=VCP.BSB.2025-09-09*BSB.VCP.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_3bfd12335ddbcb721bc2a4ff94b74774.setContent(html_03d056f7febf033d4392aed6a143f75b);
+        
+
+        marker_a7fa0a96099c8fcefa25a47fbf4d0a79.bindPopup(popup_3bfd12335ddbcb721bc2a4ff94b74774)
+        ;
+
+        
+    
+    
+            marker_a7fa0a96099c8fcefa25a47fbf4d0a79.bindTooltip(
+                `<div>
+                     Campinas (VCP) (802 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2aea31d92d98553f63c43ebe9231f351 = L.marker(
+                [-22.809, -43.2506],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_ab109728dd3e4293fcf5207178782294 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2aea31d92d98553f63c43ebe9231f351.setIcon(icon_ab109728dd3e4293fcf5207178782294);
+        
+    
+        var popup_c3cc80e53721c1dd09e58ffd7a616de9 = L.popup({"maxWidth": 300});
+
+        
+            var html_7e9cfaf327fb7a5dcb35bf0f98607f4f = $(`<div id="html_7e9cfaf327fb7a5dcb35bf0f98607f4f" style="width: 100.0%; height: 100.0%;">     <b>Rio de Janeiro (GIG)</b><br>     Distância até Brasília: 916 km<br>     <a href="https://www.google.com/maps/dir/-22.809,-43.2506/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=GIG.BSB.2025-09-09*BSB.GIG.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_c3cc80e53721c1dd09e58ffd7a616de9.setContent(html_7e9cfaf327fb7a5dcb35bf0f98607f4f);
+        
+
+        marker_2aea31d92d98553f63c43ebe9231f351.bindPopup(popup_c3cc80e53721c1dd09e58ffd7a616de9)
+        ;
+
+        
+    
+    
+            marker_2aea31d92d98553f63c43ebe9231f351.bindTooltip(
+                `<div>
+                     Rio de Janeiro (GIG) (916 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44fb7e7778be39a06ec902def6cc8aa9 = L.marker(
+                [-19.6337, -43.9685],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_a459d643bdbe97ae8c0d3a9ee888f3ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_44fb7e7778be39a06ec902def6cc8aa9.setIcon(icon_a459d643bdbe97ae8c0d3a9ee888f3ad);
+        
+    
+        var popup_06f526da9394faf88b7f1fbe6632880e = L.popup({"maxWidth": 300});
+
+        
+            var html_98eea4656bb3e13e4ebd9487a597de3e = $(`<div id="html_98eea4656bb3e13e4ebd9487a597de3e" style="width: 100.0%; height: 100.0%;">     <b>Belo Horizonte (CNF)</b><br>     Distância até Brasília: 594 km<br>     <a href="https://www.google.com/maps/dir/-19.6337,-43.9685/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=CNF.BSB.2025-09-09*BSB.CNF.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_06f526da9394faf88b7f1fbe6632880e.setContent(html_98eea4656bb3e13e4ebd9487a597de3e);
+        
+
+        marker_44fb7e7778be39a06ec902def6cc8aa9.bindPopup(popup_06f526da9394faf88b7f1fbe6632880e)
+        ;
+
+        
+    
+    
+            marker_44fb7e7778be39a06ec902def6cc8aa9.bindTooltip(
+                `<div>
+                     Belo Horizonte (CNF) (594 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44b3c2151159c6aa455e75d0b9b34561 = L.marker(
+                [-16.632, -49.2207],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_79cd30710cec598d8c98b2150bcb1593 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_44b3c2151159c6aa455e75d0b9b34561.setIcon(icon_79cd30710cec598d8c98b2150bcb1593);
+        
+    
+        var popup_97e79a7a5e538c288d73deed4db85fd8 = L.popup({"maxWidth": 300});
+
+        
+            var html_3dfcb2be2f5f91038c77770a0d94aa87 = $(`<div id="html_3dfcb2be2f5f91038c77770a0d94aa87" style="width: 100.0%; height: 100.0%;">     <b>Goiânia (GYN)</b><br>     Distância até Brasília: 170 km<br>     <a href="https://www.google.com/maps/dir/-16.632,-49.2207/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=GYN.BSB.2025-09-09*BSB.GYN.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_97e79a7a5e538c288d73deed4db85fd8.setContent(html_3dfcb2be2f5f91038c77770a0d94aa87);
+        
+
+        marker_44b3c2151159c6aa455e75d0b9b34561.bindPopup(popup_97e79a7a5e538c288d73deed4db85fd8)
+        ;
+
+        
+    
+    
+            marker_44b3c2151159c6aa455e75d0b9b34561.bindTooltip(
+                `<div>
+                     Goiânia (GYN) (170 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af054fc894e765d4f7420b6e8564e5a8 = L.marker(
+                [-20.2581, -40.2864],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_0654e4a4faa9094676c13ad95e7ae6e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_af054fc894e765d4f7420b6e8564e5a8.setIcon(icon_0654e4a4faa9094676c13ad95e7ae6e1);
+        
+    
+        var popup_55ff33118478d84576a6b7a87f5fa29f = L.popup({"maxWidth": 300});
+
+        
+            var html_9610c7840236362bb664ab0371a8a9c9 = $(`<div id="html_9610c7840236362bb664ab0371a8a9c9" style="width: 100.0%; height: 100.0%;">     <b>Vitória (VIX)</b><br>     Distância até Brasília: 944 km<br>     <a href="https://www.google.com/maps/dir/-20.2581,-40.2864/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=VIX.BSB.2025-09-09*BSB.VIX.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_55ff33118478d84576a6b7a87f5fa29f.setContent(html_9610c7840236362bb664ab0371a8a9c9);
+        
+
+        marker_af054fc894e765d4f7420b6e8564e5a8.bindPopup(popup_55ff33118478d84576a6b7a87f5fa29f)
+        ;
+
+        
+    
+    
+            marker_af054fc894e765d4f7420b6e8564e5a8.bindTooltip(
+                `<div>
+                     Vitória (VIX) (944 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_36d805e8d1a61d479836afa6c0fe332a = L.marker(
+                [-20.4686, -54.6726],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_976126ea611db99ab8730c9c51d8f962 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_36d805e8d1a61d479836afa6c0fe332a.setIcon(icon_976126ea611db99ab8730c9c51d8f962);
+        
+    
+        var popup_d76659c1c8bd4130a652e02d2a1d5469 = L.popup({"maxWidth": 300});
+
+        
+            var html_bb2815328985b83c4c17f1bcffcbde2b = $(`<div id="html_bb2815328985b83c4c17f1bcffcbde2b" style="width: 100.0%; height: 100.0%;">     <b>Campo Grande (CGR)</b><br>     Distância até Brasília: 885 km<br>     <a href="https://www.google.com/maps/dir/-20.4686,-54.6726/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=CGR.BSB.2025-09-09*BSB.CGR.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_d76659c1c8bd4130a652e02d2a1d5469.setContent(html_bb2815328985b83c4c17f1bcffcbde2b);
+        
+
+        marker_36d805e8d1a61d479836afa6c0fe332a.bindPopup(popup_d76659c1c8bd4130a652e02d2a1d5469)
+        ;
+
+        
+    
+    
+            marker_36d805e8d1a61d479836afa6c0fe332a.bindTooltip(
+                `<div>
+                     Campo Grande (CGR) (885 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_56677e6768848255b8fcaadd0986beee = L.marker(
+                [-15.6529, -56.1178],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_d3562cfba6ce1704e36e680cccc76ed6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_56677e6768848255b8fcaadd0986beee.setIcon(icon_d3562cfba6ce1704e36e680cccc76ed6);
+        
+    
+        var popup_7310f7c59f8b36674954db8b4a29ff58 = L.popup({"maxWidth": 300});
+
+        
+            var html_4454a46a50aea7d908cfc7e5039704e5 = $(`<div id="html_4454a46a50aea7d908cfc7e5039704e5" style="width: 100.0%; height: 100.0%;">     <b>Cuiabá (CGB)</b><br>     Distância até Brasília: 883 km<br>     <a href="https://www.google.com/maps/dir/-15.6529,-56.1178/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=CGB.BSB.2025-09-09*BSB.CGB.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_7310f7c59f8b36674954db8b4a29ff58.setContent(html_4454a46a50aea7d908cfc7e5039704e5);
+        
+
+        marker_56677e6768848255b8fcaadd0986beee.bindPopup(popup_7310f7c59f8b36674954db8b4a29ff58)
+        ;
+
+        
+    
+    
+            marker_56677e6768848255b8fcaadd0986beee.bindTooltip(
+                `<div>
+                     Cuiabá (CGB) (883 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5180c7f37e6a23dc51008ea3dd8db1da = L.marker(
+                [-12.9086, -38.3225],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_0b1ad8eca4aff7e29cb798cd0d9deb11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5180c7f37e6a23dc51008ea3dd8db1da.setIcon(icon_0b1ad8eca4aff7e29cb798cd0d9deb11);
+        
+    
+        var popup_7b660d28c9d9e2ab4ddc743ebf172d0f = L.popup({"maxWidth": 300});
+
+        
+            var html_7434ace56f9b42d960e8ba2c2de82871 = $(`<div id="html_7434ace56f9b42d960e8ba2c2de82871" style="width: 100.0%; height: 100.0%;">     <b>Salvador (SSA)</b><br>     Distância até Brasília: 1079 km<br>     <a href="https://www.google.com/maps/dir/-12.9086,-38.3225/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=SSA.BSB.2025-09-09*BSB.SSA.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_7b660d28c9d9e2ab4ddc743ebf172d0f.setContent(html_7434ace56f9b42d960e8ba2c2de82871);
+        
+
+        marker_5180c7f37e6a23dc51008ea3dd8db1da.bindPopup(popup_7b660d28c9d9e2ab4ddc743ebf172d0f)
+        ;
+
+        
+    
+    
+            marker_5180c7f37e6a23dc51008ea3dd8db1da.bindTooltip(
+                `<div>
+                     Salvador (SSA) (1079 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcc6882d471ac1f8064cf2c659616385 = L.marker(
+                [-10.2916, -48.3578],
+                {}
+            ).addTo(map_46f6910723e1fe926d0ed604c38e0d8f);
+        
+    
+            var icon_4496eb94a9179014da3e1d596b06b3df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fcc6882d471ac1f8064cf2c659616385.setIcon(icon_4496eb94a9179014da3e1d596b06b3df);
+        
+    
+        var popup_c65a9f65333e4a258f90ed9c36fbdf69 = L.popup({"maxWidth": 300});
+
+        
+            var html_5c7c4eaf8cad3dc555066465b7382144 = $(`<div id="html_5c7c4eaf8cad3dc555066465b7382144" style="width: 100.0%; height: 100.0%;">     <b>Palmas (PMW)</b><br>     Distância até Brasília: 611 km<br>     <a href="https://www.google.com/maps/dir/-10.2916,-48.3578/Brasília,+DF" target="_blank">🚗 Ver rota de carro</a><br>     <a href="https://www.google.com/flights?hl=pt#flt=PMW.BSB.2025-09-09*BSB.PMW.2025-09-13;c:BRL;e:1;sd:1;t:f" target="_blank">✈️ Ver voos (9-13 set)</a>     </div>`)[0];
+            popup_c65a9f65333e4a258f90ed9c36fbdf69.setContent(html_5c7c4eaf8cad3dc555066465b7382144);
+        
+
+        marker_fcc6882d471ac1f8064cf2c659616385.bindPopup(popup_c65a9f65333e4a258f90ed9c36fbdf69)
+        ;
+
+        
+    
+    
+            marker_fcc6882d471ac1f8064cf2c659616385.bindTooltip(
+                `<div>
+                     Palmas (PMW) (611 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
